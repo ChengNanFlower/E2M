@@ -15,41 +15,16 @@ pip install openpyxl
 
 ```bash
 # 基本用法：生成与输入文件同名的 .md 文件
-python3 excel_to_md.py 校园快递收发系统_数据库表结构.xlsx
+python3 excel_to_md.py example.xlsx
 
 # 指定输出文件
 python3 excel_to_md.py data.xlsx output.md
 
 # 指定文档一级标题
-python3 excel_to_md.py data.xlsx -t "数据库设计文档"
+python3 excel_to_md.py data.xlsx -t "文档"
 
 # 查看帮助
 python3 excel_to_md.py -h
-```
-
-## 示例
-
-输入 Excel：
-
-```
-Sheet: user
-┌──────┬───────────┬──────────────┬──────┬──────┬───────┬──────────────┬─────────┐
-│ 序号 │ 字段名     │ 数据类型      │ 主键 │ 外键  │ 允许空│ 默认值        │ 字段说明│
-├──────┼───────────┼──────────────┼──────┼──────┼───────┼──────────────┼─────────┤
-│ 1    │ user_id   │ INT          │ PK   │      │ 否    │ AUTO_INCR... │ 用户ID   │
-└──────┴───────────┴──────────────┴──────┴──────┴───────┴──────────────┴─────────┘
-```
-
-输出 Markdown：
-
-```markdown
-## user
-
-*user — 用户表*
-
-| 序号 | 字段名    | 数据类型     | 主键 | 外键 | 允许空 | 默认值        | 字段说明      |
-| --- | ------ | -------- | -- | -- | --- | ---------- | --------- |
-| 1   | user_id | INT      | PK |    | 否   | AUTO_INC.. | 用户ID ... |
 ```
 
 ## 特性
@@ -64,7 +39,6 @@ Sheet: user
 ```
 .
 ├── excel_to_md.py                           # 转换脚本
-├── 校园快递收发系统_数据库表结构.xlsx             # 示例 Excel 文件
 └── README.md                                # 本文件
 ```
 
